@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hourly to Salary Calculator — How Much Is Your Wage Per Year?</title>
+<meta name="description" content="Free hourly to salary calculator. Convert any hourly wage to annual, monthly, biweekly and weekly pay. Full conversion table for $10–$100 an hour, the 2,080-hour formula, overtime and examples.">
+<link rel="canonical" href="https://clippkailidaily-del.github.io/hourly-pay-calculator/">
+<meta property="og:title" content="Hourly to Salary Calculator — How Much Is Your Wage Per Year?">
+<meta property="og:description" content="Convert any hourly wage to yearly, monthly, biweekly and weekly pay — instantly, with a full $10–$100 conversion table.">
+<meta property="og:type" content="website">
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:#16202a; background:#f6f8f7; line-height:1.65; }
+  header { background:#0c3b2e; color:#fff; padding:34px 16px 26px; text-align:center; }
+  header h1 { margin:0 0 8px; font-size:32px; line-height:1.25; }
+  header p { margin:0; color:#cfe6db; font-size:17px; }
+  main { max-width:860px; margin:0 auto; padding:22px 16px 40px; }
+  .card { background:#fff; border:1px solid #dde5e1; border-radius:14px; padding:22px; box-shadow:0 2px 10px rgba(12,59,46,.06); }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  label { display:block; font-weight:600; font-size:14px; margin-bottom:6px; }
+  input { width:100%; padding:12px; font-size:18px; border:1px solid #b9c8c1; border-radius:9px; }
+  .chips { margin:14px 0 2px; display:flex; flex-wrap:wrap; gap:8px; }
+  .chip { border:1px solid #0c3b2e; color:#0c3b2e; background:#eef5f1; padding:6px 12px; border-radius:999px; cursor:pointer; font-size:14px; font-weight:600; }
+  .chip:hover { background:#0c3b2e; color:#fff; }
+  .results { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:18px; }
+  .result { background:#0c3b2e; color:#fff; border-radius:11px; padding:16px; }
+  .result small { display:block; color:#bfe0d2; font-size:13px; text-transform:uppercase; letter-spacing:.4px; }
+  .result b { font-size:26px; }
+  .result.light { background:#eef5f1; color:#0c3b2e; } .result.light small { color:#3d6b5a; }
+  h2 { margin:34px 0 10px; font-size:24px; color:#0c3b2e; }
+  h3 { margin:20px 0 6px; font-size:18px; }
+  table { width:100%; border-collapse:collapse; background:#fff; font-size:15px; }
+  th, td { padding:9px 10px; border-bottom:1px solid #e3eae6; text-align:right; }
+  th:first-child, td:first-child { text-align:left; }
+  thead th { background:#0c3b2e; color:#fff; }
+  tbody tr:hover { background:#f0f6f2; }
+  .tablewrap { overflow-x:auto; border:1px solid #dde5e1; border-radius:12px; }
+  .note { background:#fff8e6; border:1px solid #efd9a0; border-radius:10px; padding:13px 16px; font-size:15px; }
+  details { background:#fff; border:1px solid #dde5e1; border-radius:10px; padding:12px 16px; margin:9px 0; }
+  summary { font-weight:600; cursor:pointer; }
+  footer { border-top:1px solid #dde5e1; padding:22px 16px 34px; text-align:center; color:#5a6c64; font-size:14px; }
+  footer a, main a { color:#0c3b2e; }
+  nav.top { text-align:center; padding:10px; background:#0a2f25; }
+  nav.top a { color:#cfe6db; margin:0 10px; text-decoration:none; font-size:14px; }
+  @media (max-width:640px){ .grid{grid-template-columns:1fr;} .results{grid-template-columns:1fr;} header h1{font-size:26px;} }
+</style>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {"@type":"Question","name":"How do you calculate annual salary from hourly pay?","acceptedAnswer":{"@type":"Answer","text":"Multiply your hourly wage by the hours you work per week, then by the weeks you work per year. For a standard full-time schedule: hourly wage x 40 x 52 = hourly wage x 2,080."}},
+  {"@type":"Question","name":"What is $25 an hour annually?","acceptedAnswer":{"@type":"Answer","text":"$25 an hour at 40 hours a week for 52 weeks is $52,000 a year before taxes."}},
+  {"@type":"Question","name":"What is $20 an hour annually?","acceptedAnswer":{"@type":"Answer","text":"$20 an hour at 40 hours a week for 52 weeks is $41,600 a year before taxes."}},
+  {"@type":"Question","name":"How many working hours are in a year?","acceptedAnswer":{"@type":"Answer","text":"A standard full-time year is 2,080 hours: 40 hours a week multiplied by 52 weeks."}},
+  {"@type":"Question","name":"Is the result before or after tax?","acceptedAnswer":{"@type":"Answer","text":"All figures on this page are gross pay, before federal, state and FICA taxes and any other deductions."}}
+ ]
+}
+</script>
+</head>
+<body>
+<nav class="top"><a href="index.html">Calculator</a><a href="about.html">About</a><a href="privacy.html">Privacy Policy</a><a href="contact.html">Contact</a></nav>
+<header>
+  <h1>Hourly to Salary Calculator</h1>
+  <p>How much is your hourly wage per year? Find out in seconds — annual, monthly, biweekly and weekly.</p>
+</header>
+<main>
+  <section class="card" aria-label="Hourly to salary calculator">
+    <div class="grid">
+      <div><label for="rate">Hourly wage ($)</label><input id="rate" type="number" min="0" step="0.25" value="25"></div>
+      <div><label for="hours">Hours per week</label><input id="hours" type="number" min="0" step="1" value="40"></div>
+      <div><label for="weeks">Weeks per year</label><input id="weeks" type="number" min="0" max="52" step="1" value="52"></div>
+    </div>
+    <div class="chips" aria-label="Popular wages">
+      <button class="chip" data-rate="15">$15/hr</button>
+      <button class="chip" data-rate="18">$18/hr</button>
+      <button class="chip" data-rate="20">$20/hr</button>
+      <button class="chip" data-rate="22">$22/hr</button>
+      <button class="chip" data-rate="25">$25/hr</button>
+      <button class="chip" data-rate="30">$30/hr</button>
+      <button class="chip" data-rate="35">$35/hr</button>
+      <button class="chip" data-rate="40">$40/hr</button>
+      <button class="chip" data-rate="50">$50/hr</button>
+    </div>
+    <div class="results">
+      <div class="result"><small>Per year</small><b id="annual">$52,000</b></div>
+      <div class="result light"><small>Per month</small><b id="monthly">$4,333</b></div>
+      <div class="result light"><small>Biweekly (every 2 weeks)</small><b id="biweekly">$2,000</b></div>
+      <div class="result light"><small>Per week</small><b id="weekly">$1,000</b></div>
+    </div>
+    <p style="margin:14px 0 0;color:#5a6c64;font-size:14px;">Gross pay before taxes. Change any number above and the results update instantly — no button to press.</p>
+  </section>
+
+  <h2>How to convert hourly pay to salary</h2>
+  <p>The formula is simple: <strong>Annual salary = hourly wage × hours per week × weeks per year</strong>. A standard full-time job is 40 hours a week for 52 weeks, which is <strong>2,080 working hours a year</strong>. That gives you a shortcut used by payroll departments everywhere: <strong>hourly wage × 2,080 = annual salary</strong>, and every $1 an hour is worth $2,080 a year.</p>
+  <p><strong>Worked example:</strong> $25 an hour × 40 hours × 52 weeks = <strong>$52,000 a year</strong>. Monthly that is $52,000 ÷ 12 = $4,333, and a biweekly paycheck is $52,000 ÷ 26 = $2,000.</p>
+  <h3>Adjust the weeks if you take unpaid time off</h3>
+  <p>The 2,080-hour shortcut assumes every week is paid, including holidays and vacation. If you are a contractor or your job does not pay for time off, set the weeks per year lower — 50 weeks for two unpaid weeks off, for example. At $25 an hour and 50 weeks, the real figure is $50,000, not $52,000.</p>
+  <h3>What about overtime?</h3>
+  <p>Under the US Fair Labor Standards Act, most hourly employees are paid 1.5× their rate for hours over 40 in a week. If you regularly work 45 hours a week at $22 an hour, those 5 extra hours pay $33 each — an extra $165 a week, or $8,580 a year, on top of the $45,760 base. To model that here, raise the hours per week and remember the extra hours are worth more than the base rate.</p>
+  <h3>Hourly vs salary — which offer is better?</h3>
+  <p>Comparing a job offer is easier once both are on the same basis. A $60,000 salary equals $28.85 an hour at 40 hours a week — but only $19.23 an hour if the job really takes 60 hours a week. Salaried roles often include paid holidays, vacation and benefits such as health insurance and a 401(k) match, which can add 20–40% to total compensation. Convert first, then compare the whole package, not just the headline number.</p>
+  <p class="note"><strong>Please note:</strong> every figure on this page is <strong>gross pay before taxes</strong>. Your take-home pay will be lower after federal income tax, state tax, Social Security and Medicare (FICA), and any benefit deductions. This calculator is for planning and comparison, not tax advice.</p>
+
+  <h2>Hourly to salary conversion table (40 hours a week, 52 weeks)</h2>
+  <p>Use this table for a quick answer without the calculator. Find your hourly wage and read across for weekly, biweekly, monthly and annual gross pay.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Hourly wage</th><th>Weekly</th><th>Biweekly</th><th>Monthly</th><th>Per year</th></tr></thead>
+      <tbody>
+          <tr><td>$10 an hour</td><td>$400</td><td>$800</td><td>$1,733.33</td><td>$20,800</td></tr>
+          <tr><td>$11 an hour</td><td>$440</td><td>$880</td><td>$1,906.67</td><td>$22,880</td></tr>
+          <tr><td>$12 an hour</td><td>$480</td><td>$960</td><td>$2,080</td><td>$24,960</td></tr>
+          <tr><td>$13 an hour</td><td>$520</td><td>$1,040</td><td>$2,253.33</td><td>$27,040</td></tr>
+          <tr><td>$14 an hour</td><td>$560</td><td>$1,120</td><td>$2,426.67</td><td>$29,120</td></tr>
+          <tr><td>$15 an hour</td><td>$600</td><td>$1,200</td><td>$2,600</td><td>$31,200</td></tr>
+          <tr><td>$16 an hour</td><td>$640</td><td>$1,280</td><td>$2,773.33</td><td>$33,280</td></tr>
+          <tr><td>$17 an hour</td><td>$680</td><td>$1,360</td><td>$2,946.67</td><td>$35,360</td></tr>
+          <tr><td>$18 an hour</td><td>$720</td><td>$1,440</td><td>$3,120</td><td>$37,440</td></tr>
+          <tr><td>$19 an hour</td><td>$760</td><td>$1,520</td><td>$3,293.33</td><td>$39,520</td></tr>
+          <tr><td>$20 an hour</td><td>$800</td><td>$1,600</td><td>$3,466.67</td><td>$41,600</td></tr>
+          <tr><td>$21 an hour</td><td>$840</td><td>$1,680</td><td>$3,640</td><td>$43,680</td></tr>
+          <tr><td>$22 an hour</td><td>$880</td><td>$1,760</td><td>$3,813.33</td><td>$45,760</td></tr>
+          <tr><td>$23 an hour</td><td>$920</td><td>$1,840</td><td>$3,986.67</td><td>$47,840</td></tr>
+          <tr><td>$24 an hour</td><td>$960</td><td>$1,920</td><td>$4,160</td><td>$49,920</td></tr>
+          <tr><td>$25 an hour</td><td>$1,000</td><td>$2,000</td><td>$4,333.33</td><td>$52,000</td></tr>
+          <tr><td>$26 an hour</td><td>$1,040</td><td>$2,080</td><td>$4,506.67</td><td>$54,080</td></tr>
+          <tr><td>$27 an hour</td><td>$1,080</td><td>$2,160</td><td>$4,680</td><td>$56,160</td></tr>
+          <tr><td>$28 an hour</td><td>$1,120</td><td>$2,240</td><td>$4,853.33</td><td>$58,240</td></tr>
+          <tr><td>$29 an hour</td><td>$1,160</td><td>$2,320</td><td>$5,026.67</td><td>$60,320</td></tr>
+          <tr><td>$30 an hour</td><td>$1,200</td><td>$2,400</td><td>$5,200</td><td>$62,400</td></tr>
+          <tr><td>$31 an hour</td><td>$1,240</td><td>$2,480</td><td>$5,373.33</td><td>$64,480</td></tr>
+          <tr><td>$32 an hour</td><td>$1,280</td><td>$2,560</td><td>$5,546.67</td><td>$66,560</td></tr>
+          <tr><td>$33 an hour</td><td>$1,320</td><td>$2,640</td><td>$5,720</td><td>$68,640</td></tr>
+          <tr><td>$34 an hour</td><td>$1,360</td><td>$2,720</td><td>$5,893.33</td><td>$70,720</td></tr>
+          <tr><td>$35 an hour</td><td>$1,400</td><td>$2,800</td><td>$6,066.67</td><td>$72,800</td></tr>
+          <tr><td>$36 an hour</td><td>$1,440</td><td>$2,880</td><td>$6,240</td><td>$74,880</td></tr>
+          <tr><td>$37 an hour</td><td>$1,480</td><td>$2,960</td><td>$6,413.33</td><td>$76,960</td></tr>
+          <tr><td>$38 an hour</td><td>$1,520</td><td>$3,040</td><td>$6,586.67</td><td>$79,040</td></tr>
+          <tr><td>$39 an hour</td><td>$1,560</td><td>$3,120</td><td>$6,760</td><td>$81,120</td></tr>
+          <tr><td>$40 an hour</td><td>$1,600</td><td>$3,200</td><td>$6,933.33</td><td>$83,200</td></tr>
+          <tr><td>$45 an hour</td><td>$1,800</td><td>$3,600</td><td>$7,800</td><td>$93,600</td></tr>
+          <tr><td>$50 an hour</td><td>$2,000</td><td>$4,000</td><td>$8,666.67</td><td>$104,000</td></tr>
+          <tr><td>$55 an hour</td><td>$2,200</td><td>$4,400</td><td>$9,533.33</td><td>$114,400</td></tr>
+          <tr><td>$60 an hour</td><td>$2,400</td><td>$4,800</td><td>$10,400</td><td>$124,800</td></tr>
+          <tr><td>$65 an hour</td><td>$2,600</td><td>$5,200</td><td>$11,266.67</td><td>$135,200</td></tr>
+          <tr><td>$70 an hour</td><td>$2,800</td><td>$5,600</td><td>$12,133.33</td><td>$145,600</td></tr>
+          <tr><td>$75 an hour</td><td>$3,000</td><td>$6,000</td><td>$13,000</td><td>$156,000</td></tr>
+          <tr><td>$80 an hour</td><td>$3,200</td><td>$6,400</td><td>$13,866.67</td><td>$166,400</td></tr>
+          <tr><td>$90 an hour</td><td>$3,600</td><td>$7,200</td><td>$15,600</td><td>$187,200</td></tr>
+          <tr><td>$100 an hour</td><td>$4,000</td><td>$8,000</td><td>$17,333.33</td><td>$208,000</td></tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+  <details><summary>How do you calculate annual salary from hourly pay?</summary><p>Multiply your hourly wage by your hours per week, then by your weeks per year. Full-time shortcut: wage × 2,080. Example: $20 × 2,080 = $41,600 a year.</p></details>
+  <details><summary>What is $25 an hour annually?</summary><p>$52,000 a year before taxes, at 40 hours a week for 52 weeks — $4,333 a month and $2,000 every two weeks.</p></details>
+  <details><summary>What is $20 an hour annually?</summary><p>$41,600 a year before taxes — $3,467 a month and $1,600 every two weeks.</p></details>
+  <details><summary>What is $15 an hour annually?</summary><p>$31,200 a year before taxes — $2,600 a month and $1,200 every two weeks.</p></details>
+  <details><summary>How many working hours are in a year?</summary><p>2,080 for a standard full-time schedule (40 × 52). Part-time at 30 hours a week is 1,560 hours; 37.5 hours a week is 1,950 hours.</p></details>
+  <details><summary>How do I convert a salary back to hourly?</summary><p>Divide the annual salary by 2,080 (for a 40-hour week). A $75,000 salary is $75,000 ÷ 2,080 ≈ $36.06 an hour.</p></details>
+  <details><summary>Is this calculator before or after tax?</summary><p>Before tax. All amounts are gross. Take-home pay depends on your tax filing status, state, and deductions.</p></details>
+  <details><summary>Does this include overtime pay?</summary><p>The calculator prices every hour at the base rate. For overtime, add your extra hours at 1.5× separately, as explained in the overtime section above.</p></details>
+</main>
+<footer>
+  <p><a href="index.html">Calculator</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy Policy</a> · <a href="contact.html">Contact</a></p>
+  <p>Hourly Pay Calculator — free tool for US workers comparing pay. Figures are estimates of gross pay for planning only.</p>
+</footer>
+<script>
+  const fmt = n => "$" + Math.round(n).toLocaleString("en-US");
+  const rateEl = document.getElementById("rate"), hoursEl = document.getElementById("hours"), weeksEl = document.getElementById("weeks");
+  function calc(){
+    const r = parseFloat(rateEl.value) || 0, h = parseFloat(hoursEl.value) || 0, w = parseFloat(weeksEl.value) || 0;
+    const annual = r * h * w;
+    document.getElementById("annual").textContent = fmt(annual);
+    document.getElementById("monthly").textContent = fmt(annual / 12);
+    document.getElementById("biweekly").textContent = fmt(annual / 26);
+    document.getElementById("weekly").textContent = fmt(r * h);
+  }
+  [rateEl, hoursEl, weeksEl].forEach(el => el.addEventListener("input", calc));
+  document.querySelectorAll(".chip").forEach(ch => ch.addEventListener("click", () => { rateEl.value = ch.dataset.rate; calc(); }));
+  calc();
+</script>
+</body>
+</html>
