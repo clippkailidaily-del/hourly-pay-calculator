@@ -1,0 +1,39 @@
+# Hourly Pay Calculator
+> Free calculator that converts hourly wages to annual salary and salaries to hourly pay, with 2026 after-tax take-home estimates for US workers. Conversions use the standard full-time year of 2,080 hours (40 hours x 52 weeks). After-tax estimates assume a single filer, the 2026 standard deduction, federal brackets and FICA at 7.65%, before state tax.
+
+## Calculator
+- [Hourly to Salary Calculator](https://clippkailidaily-del.github.io/hourly-pay-calculator/): interactive calculator plus a $10-$100 an hour conversion table
+
+## Hourly wages
+- [$12 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/12-an-hour.html): $12 an hour = $24,960 a year; after-tax take-home about $1,847.05 a month (2026 estimate)
+- [$14 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/14-an-hour.html): $14 an hour = $29,120 a year; after-tax take-home about $2,131.49 a month (2026 estimate)
+- [$15 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/15-an-hour.html): $15 an hour = $31,200 a year; after-tax take-home about $2,270.77 a month (2026 estimate)
+- [$16 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/16-an-hour.html): $16 an hour = $33,280 a year; after-tax take-home about $2,410.04 a month (2026 estimate)
+- [$17 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/17-an-hour.html): $17 an hour = $35,360 a year; after-tax take-home about $2,549.31 a month (2026 estimate)
+- [$18 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/18-an-hour.html): $18 an hour = $37,440 a year; after-tax take-home about $2,688.59 a month (2026 estimate)
+- [$19 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/19-an-hour.html): $19 an hour = $39,520 a year; after-tax take-home about $2,827.86 a month (2026 estimate)
+- [$20 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/20-an-hour.html): $20 an hour = $41,600 a year; after-tax take-home about $2,967.13 a month (2026 estimate)
+- [$21 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/21-an-hour.html): $21 an hour = $43,680 a year; after-tax take-home about $3,106.41 a month (2026 estimate)
+- [$22 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/22-an-hour.html): $22 an hour = $45,760 a year; after-tax take-home about $3,245.68 a month (2026 estimate)
+- [$24 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/24-an-hour.html): $24 an hour = $49,920 a year; after-tax take-home about $3,524.23 a month (2026 estimate)
+- [$25 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/25-an-hour.html): $25 an hour = $52,000 a year; after-tax take-home about $3,663.50 a month (2026 estimate)
+- [$28 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/28-an-hour.html): $28 an hour = $58,240 a year; after-tax take-home about $4,081.32 a month (2026 estimate)
+- [$30 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/30-an-hour.html): $30 an hour = $62,400 a year; after-tax take-home about $4,359.87 a month (2026 estimate)
+- [$32 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/32-an-hour.html): $32 an hour = $66,560 a year; after-tax take-home about $4,637.91 a month (2026 estimate)
+- [$35 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/35-an-hour.html): $35 an hour = $72,800 a year; after-tax take-home about $5,003.73 a month (2026 estimate)
+- [$40 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/40-an-hour.html): $40 an hour = $83,200 a year; after-tax take-home about $5,613.43 a month (2026 estimate)
+- [$45 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/45-an-hour.html): $45 an hour = $93,600 a year; after-tax take-home about $6,223.13 a month (2026 estimate)
+- [$50 an hour is how much a year?](https://clippkailidaily-del.github.io/hourly-pay-calculator/50-an-hour.html): $50 an hour = $104,000 a year; after-tax take-home about $6,832.83 a month (2026 estimate)
+
+## Salaries
+- [$40,000 a year is how much an hour?](https://clippkailidaily-del.github.io/hourly-pay-calculator/40000-a-year.html): after-tax take-home about $2,860.00 a month (2026 estimate)
+- [$50,000 a year is how much an hour?](https://clippkailidaily-del.github.io/hourly-pay-calculator/50000-a-year.html): after-tax take-home about $3,529.58 a month (2026 estimate)
+- [$60,000 a year is how much an hour?](https://clippkailidaily-del.github.io/hourly-pay-calculator/60000-a-year.html): after-tax take-home about $4,199.17 a month (2026 estimate)
+- [$75,000 a year is how much an hour?](https://clippkailidaily-del.github.io/hourly-pay-calculator/75000-a-year.html): after-tax take-home about $5,132.71 a month (2026 estimate)
+- [$80,000 a year is how much an hour?](https://clippkailidaily-del.github.io/hourly-pay-calculator/80000-a-year.html): after-tax take-home about $5,425.83 a month (2026 estimate)
+- [$100,000 a year is how much an hour?](https://clippkailidaily-del.github.io/hourly-pay-calculator/100000-a-year.html): after-tax take-home about $6,598.33 a month (2026 estimate)
+
+## About
+- [About](https://clippkailidaily-del.github.io/hourly-pay-calculator/about.html)
+- [Privacy Policy](https://clippkailidaily-del.github.io/hourly-pay-calculator/privacy.html)
+- [Contact](https://clippkailidaily-del.github.io/hourly-pay-calculator/contact.html)
